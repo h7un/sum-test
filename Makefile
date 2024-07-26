@@ -1,8 +1,8 @@
 #Makefile
-all: sum-test1
+all: sum-test
 
-sum-test1: main.o sum.o
-	g++ -o sum-test1 main.o sum.o
+sum-test: main.o sum.o
+	g++ -o sum-test main.o sum.o
 
 main.o: sum.h main.cpp
 	g++ -c -o main.o main.cpp
@@ -11,5 +11,5 @@ sum.o: sum.h sum.cpp
 	g++ -c -o sum.o sum.cpp
 
 clean:
-	rm -f sum-test1
+	rm -f sum-test
 	rm -f *.o
